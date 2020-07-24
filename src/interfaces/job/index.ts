@@ -5,11 +5,14 @@ export interface JobInterface{
     salary: number,
     experience: string,
     education: string,
-    country: string,
+    countryId: string,
     userId: number,
     categoryId: number,
-
+    category: number,
     maxSalary: number,
     minSalary: number,
+    skip: number,
+    country: number,
+    jobId: number
     
 };

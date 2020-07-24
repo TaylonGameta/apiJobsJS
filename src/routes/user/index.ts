@@ -9,9 +9,5 @@ import {login, register, auth} from '../../controllers/user';
 router.post('/login', login);
 router.post('/register', register);
 
-router.get('/capeta', auth, (req, res)=>{
-    res.json({foi: req.body.id})
-});
-
 export = router;
 

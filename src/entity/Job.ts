@@ -1,6 +1,7 @@
 import {Entity, PrimaryGeneratedColumn, Column, ManyToOne} from "typeorm";
 import {User} from '../entity/User';
 import {Category} from '../entity/Category';
+import {Country} from '../entity/Country';
 
 @Entity()
 export class Job {
@@ -26,13 +27,13 @@ export class Job {
     @Column()
     salary: number;
 
-    @Column()
-    country: string;
-
     @ManyToOne(type => User, user => user.jobs)
     user : User;
 
     @ManyToOne(type => Category, category => category.jobs)
     category: Category;
+
+    @ManyToOne(type => Country, country => country.jobs)
+    country: Country;
 
 }

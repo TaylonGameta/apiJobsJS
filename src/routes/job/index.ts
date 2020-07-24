@@ -1,14 +1,15 @@
 import {Router, json} from 'express';
 const router: Router = Router();
-import {create, read} from '../../controllers/job';
+import {create, read, update} from '../../controllers/job';
 import {auth} from '../../controllers/user';
 
 /*
-*** Product endpoints
+*** Job endpoints
 */
 
 router.post('/create', auth, create);
 router.post('/read', auth, read);
+router.post('/update', auth, update);
 
 export = router;
 
