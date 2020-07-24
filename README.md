@@ -1,4 +1,4 @@
-# api rest created to feed a job finding application
+# API REST created to feed a job finding application
 
 Tools used to build this rest api:
 
